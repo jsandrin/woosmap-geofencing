@@ -1,4 +1,4 @@
-﻿
+
 # Notification Service with Location and API calls
 
 ##  Overview
@@ -45,12 +45,12 @@ Get the location of user on notification to complete the payload with informatio
 
 ## Documentation
 
-* [Enabling Location](./EnablingLocation.md)
-* [Enabling the Push Notification Service](./EnablingPushNotificationService.md)
-* [Notifications Service Extensions](./NotificationsServiceExtensions.md)
-* [Check Timestamp of the payload](./CheckTimestampPayload.md)
-* [Setup the location manager](./SetupLocationManager.md)
-* [APIs request](./APIsRequest.md)
+* [Enabling Location](./doc/EnablingLocation.md)
+* [Enabling the Push Notification Service](./doc/EnablingPushNotificationService.md)
+* [Notifications Service Extensions](./doc/NotificationsServiceExtensions.md)
+* [Check Timestamp of the payload](./doc/CheckTimestampPayload.md)
+* [Setup the location manager](./doc/SetupLocationManager.md)
+* [APIs request](./doc/APIsRequest.md)
 
 
 

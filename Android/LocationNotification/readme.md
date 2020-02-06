@@ -50,10 +50,10 @@ Get the location of user on notification to complete the payload with informatio
 
 ## Documentation
 
-* [Enabling Location](./EnablingLocation.md)
-* [Set up a Firebase Cloud Messaging](./SetupFirebaseCloudMessaging.md)
-* [Handling messages](./HandlingMessages.md)
-* [Check Location permissions](./CheckLocationpermissions.md)
-* [Check Timestamp of the payload](./CheckTimeStamp.md)
-* [APIs request](./APIsrequest.md)
+* [Enabling Location](./doc/EnablingLocation.md)
+* [Set up a Firebase Cloud Messaging](./doc/SetupFirebaseCloudMessaging.md)
+* [Handling messages](./doc/HandlingMessages.md)
+* [Check Location permissions](./doc/CheckLocationpermissions.md)
+* [Check Timestamp of the payload](./doc/CheckTimeStamp.md)
+* [APIs request](./doc/APIsrequest.md)
 
