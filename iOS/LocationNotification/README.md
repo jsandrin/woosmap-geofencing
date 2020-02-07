@@ -9,14 +9,12 @@ Get the location of user on notification to complete the payload with informatio
 -   iOS 8 and above.
 -   Xcode 8 and above
 
-##  Get Started
-
-### Install
+## Installation
 * Download the latest code version or add the repository as a git submodule to your git-tracked project.
 *  Open your Xcode project, then drag and drop source directory onto your project. Make sure to select Copy items when asked if you extracted the code archive outside of your project.
 * Compile and install the mobile app onto your mobile device.
 
-### Get Keys
+## Get Keys
 * Get the token in the log debug or on the main screen of the app.
 * If you want a map in the notification, get Google map Key for static map on [Google documentation](https://developers.google.com/maps/documentation/maps-static/get-api-key).
 
@@ -30,7 +28,7 @@ Get the location of user on notification to complete the payload with informatio
 
 ![Search API](https://raw.githubusercontent.com/woosmap/woosmap-geofencing/master/iOS/LocationNotification/assets/userLocation.png)
 
-### Send Notification
+## Send Notification
 * Get the token in the log debug or on the main screen of the app.
 * Install the app PushNotification from the github : [https://github.com/noodlewerk/NWPusher](https://github.com/noodlewerk/NWPusher)
 * Enter your push certificate : [https://github.com/noodlewerk/NWPusher#certificate](https://github.com/noodlewerk/NWPusher#certificate)
