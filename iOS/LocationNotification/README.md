@@ -2,8 +2,8 @@
 
 Get the location of user on notification to complete the payload with information from APIs. In this sample, we call a search API Woosmap to get the POIs nearrest of the location of the user and a call to Google Static Map to show where is the nearrest POI.
 
-<p style="text-align:center">
-  <img alt="Notification Location" src="https://raw.githubusercontent.com/woosmap/woosmap-geofencing/master/iOS/LocationNotification/assets/2Markers.png" width="50%">
+<p align="center">
+  <img alt="Notification Location" src="https://raw.githubusercontent.com/woosmap/woosmap-geofencing/master/assets/ios/2Markers.png" width="50%">
 </p>
 
 ##  Pre-requisites
@@ -20,20 +20,20 @@ Get the location of user on notification to complete the payload with informatio
 * Get the token in the log debug or on the main screen of the app.
 * If you want a map in the notification, get Google map Key for static map on [Google documentation](https://developers.google.com/maps/documentation/maps-static/get-api-key).
 
-<p style="text-align:center">
-  <img alt="Google map Static" src="https://raw.githubusercontent.com/woosmap/woosmap-geofencing/master/iOS/LocationNotification/assets/1Marker.png" width="50%">
+<p align="center">
+  <img alt="Google map Static" src="https://raw.githubusercontent.com/woosmap/woosmap-geofencing/master/assets/ios/1Marker.png" width="50%">
 </p>
 
 * If you want find the nearest of your store from the user location, get Woosmap Key API on [Woosmap developer documentation](https://developers.woosmap.com/get-started).
 
-<p style="text-align:center">
-  <img alt="Search API" src="https://raw.githubusercontent.com/woosmap/woosmap-geofencing/master/iOS/LocationNotification/assets/UserLocationPOI.png" width="50%">
+<p align="center">
+  <img alt="Search API" src="https://raw.githubusercontent.com/woosmap/woosmap-geofencing/master/assets/ios/UserLocationPOI.png" width="50%">
 </p>
 
 * If you don't use the APIs with keys, you can only get the location of the user.
 
-<p style="text-align:center">
-  <img alt="User Location" src="https://raw.githubusercontent.com/woosmap/woosmap-geofencing/master/iOS/LocationNotification/assets/userLocation.png" width="50%">
+<p align="center">
+  <img alt="User Location" src="https://raw.githubusercontent.com/woosmap/woosmap-geofencing/master/assets/ios/userLocation.png" width="50%">
 </p>
 
 ## Send Notification

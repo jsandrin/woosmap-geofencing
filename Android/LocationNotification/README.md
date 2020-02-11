@@ -4,7 +4,7 @@
 
 Get the location of user on notification to complete the payload with information from APIs. In this sample, we call a search API Woosmap to get the POIs nearrest of the location of the user and a call to Google Static Map to show where is the nearrest POI.
 <p align="center">
-	<img src="./assets/notif.png" alt="Notification Location" width="50%">
+	<img src="https://raw.githubusercontent.com/woosmap/woosmap-geofencing/master/assets/android/notif.png" alt="Notification Location" width="50%">
 </p>
 
 
@@ -30,16 +30,16 @@ Get the location of user on notification to complete the payload with informatio
 * Get the token in the log debug or on the main screen of the app.
 * If you want a map in the notification, get Google map Key for static map on [Google documentation](https://developers.google.com/maps/documentation/maps-static/get-api-key)
 <p align="center">
- 	<img src="./assets/GmapStatic.png" alt="Google map Static" width="50%">
+ 	<img src="https://raw.githubusercontent.com/woosmap/woosmap-geofencing/master/assets/android/GmapStatic.png" alt="Google map Static" width="50%">
 </p>
 
 * If you want find the nearest of your store from the user location, get Woosmap Key API on [Woosmap developer documentation](https://developers.woosmap.com/get-started)
 <p align="center">
-	<img src="./assets/SearchAPIonly.png" alt="Search API" width="50%">
+	<img src="https://raw.githubusercontent.com/woosmap/woosmap-geofencing/master/assets/android/SearchAPIonly.png" alt="Search API" width="50%">
 </p>
 * If you don't use the APIs with keys, you can only get the location of the user.
 <p align="center">
-	<img src="./assets/userLocation.png" alt="User Location" width="50%">
+	<img src="https://raw.githubusercontent.com/woosmap/woosmap-geofencing/master/assets/android/userLocation.png" alt="User Location" width="50%">
 </p>
 
 ### Send Notification

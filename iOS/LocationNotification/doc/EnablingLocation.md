@@ -15,7 +15,7 @@ iOS 13 has the following three location permissions (ignore Denied since it igno
 -   **Allow Once**  — temporary Allow While In Use
 -   **Allowed**  — deferred until really needed
 
-![alt text](./assets/notifallow.png "Notification Allow")
+![alt text](https://raw.githubusercontent.com/woosmap/woosmap-geofencing/master/assets/ios/notifallow.png "Notification Allow")
 
 ### Allow Once Permission
 
@@ -31,7 +31,7 @@ Always Allow permission isn’t there by default in the new permission dialog. I
 
 Let’s see how that works with the different kinds of location authorizations.
 
-![alt text](./assets/location-prompt-flow-ios-13.png "Prompt flow")
+![alt text](https://raw.githubusercontent.com/woosmap/woosmap-geofencing/master/assets/ios/location-prompt-flow-ios-13.png "Prompt flow")
 
 ### Case 1 : requestAlwaysAuthorization
 
