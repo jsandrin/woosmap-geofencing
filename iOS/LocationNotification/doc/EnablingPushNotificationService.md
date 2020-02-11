@@ -4,7 +4,7 @@
 You need to create an App ID in your developer account and enable the push notification entitlement. Xcode has a simple way to do this, click the  **_Capabilities_**  tab and set the  _**Push Notifications**_  switch  **_On_**.
 
 After loading, it should look like this:
-![alt text](./assets/Push-Notification-Capability.png "Capability")
+![alt text](https://raw.githubusercontent.com/woosmap/woosmap-geofencing/master/assets/ios/Push-Notification-Capability.png "Capability")
 
 ### Asking for User Notifications Permission
 
