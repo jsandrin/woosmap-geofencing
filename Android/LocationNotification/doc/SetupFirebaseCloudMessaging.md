@@ -5,7 +5,7 @@
 3.  Add the dependency for the Cloud Messaging Android library to your module (app-level) Gradle file (usually  `app/build.gradle`):
 ```
 implementation 'com.google.firebase:firebase-messaging:19.0.1'
- ```
+```
 
 ## Create a class Messaging Service
 
@@ -38,9 +38,9 @@ Add the following to your app's manifest:
         <action android:name="com.google.firebase.MESSAGING_EVENT" />
     </intent-filter>
 </service>
- ```
- 
- `ExampleInstanceIdService` and `ExampleMessagingService` are your own services which have to inherit from `FirebaseInstanceIdService` and `FirebaseMessagingService`
+``` 
+
+`ExampleInstanceIdService` and `ExampleMessagingService` are your own services which have to inherit from `FirebaseInstanceIdService` and `FirebaseMessagingService`.
 
 ## Access the device registration token
 
@@ -55,42 +55,42 @@ The registration token may change when:
 -   The user uninstalls/reinstall the app
 -   The user clears app data.
  
-  ```java
-  FirebaseInstanceId.getInstance().getInstanceId()  
-	  .addOnCompleteListener(new  OnCompleteListener<InstanceIdResult>()  {
-	    @Override  
-	    public  void onComplete(@NonNull  Task<InstanceIdResult> task)  {
-	      if  (!task.isSuccessful())  {  
-		      Log.w(TAG,  "getInstanceId failed", task.getException());  
-		      return;  
-		  }  
-		  // Get new Instance ID token  
-		  String token = task.getResult().getToken();
-		  // Log and toast  
-		  String msg = getString(R.string.msg_token_fmt, token);
-		  Log.d(TAG, msg);  Toast.makeText(MainActivity.this, msg,  				
-		  Toast.LENGTH_SHORT).show();  
-		 } 
+```java
+FirebaseInstanceId.getInstance().getInstanceId()  
+  .addOnCompleteListener(new  OnCompleteListener<InstanceIdResult>()  {
+    @Override  
+    public  void onComplete(@NonNull  Task<InstanceIdResult> task)  {
+      if  (!task.isSuccessful())  {  
+          Log.w(TAG,  "getInstanceId failed", task.getException());  
+          return;  
+      }  
+      // Get new Instance ID token  
+      String token = task.getResult().getToken();
+      // Log and toast  
+      String msg = getString(R.string.msg_token_fmt, token);
+      Log.d(TAG, msg);  Toast.makeText(MainActivity.this, msg,  				
+      Toast.LENGTH_SHORT).show();  
+     } 
 });
-   ```
+```
 ## Monitor token generation
 
 The `onNewToken` callback fires whenever a new token is generated.
-   ```java
- /**  
- * Called if InstanceID token is updated. This may occur if the security of  
- * the previous token had been compromised. Note that this is called when the InstanceID token  
- * is initially generated so this is where you would retrieve the token.  
- */  
+```java
+/**  
+* Called if InstanceID token is updated. This may occur if the security of  
+* the previous token had been compromised. Note that this is called when the InstanceID token  
+* is initially generated so this is where you would retrieve the token.  
+*/  
 @Override  
 public  void onNewToken(String token)  {  
-		Log.d(TAG,  "Refreshed token: "  + token);  
-		// If you want to send messages to this application instance or  
-		// manage 	this apps subscriptions on the server side, send the  
-		// Instance ID token to your app server. 
-		sendRegistrationToServer(token);  
+    Log.d(TAG,  "Refreshed token: "  + token);  
+    // If you want to send messages to this application instance or  
+    // manage 	this apps subscriptions on the server side, send the  
+    // Instance ID token to your app server. 
+    sendRegistrationToServer(token);  
 }   
-   ```
+```
 
 ## Receive messages
 
