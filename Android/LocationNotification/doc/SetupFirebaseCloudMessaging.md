@@ -24,21 +24,21 @@ public class WoosmapMessagingService extends FirebaseMessagingService {
 
 ## Edit your app manifest
 
-Add the following to your app's manifest:
+Add to your app's manifest a service that extends `FirebaseMessagingService`. 
+This is required if you want to do any message handling beyond receiving notifications on apps in the background. To receive notifications in foregrounded apps, to receive data payload, to send upstream messages, and so on, you must extend this service.
 
--   A service that extends  `FirebaseMessagingService`. This is required if you want to do any message handling beyond receiving notifications on apps in the background. To receive notifications in foregrounded apps, to receive data payload, to send upstream messages, and so on, you must extend this service.
 ```xml
 <service android:name=".ExampleInstanceIdService">
-    <intent-filter>
-        <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
-    </intent-filter>
+<intent-filter>
+    <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+</intent-filter>
 </service>
 <service android:name=".ExampleMessagingService">
-    <intent-filter>
-        <action android:name="com.google.firebase.MESSAGING_EVENT" />
-    </intent-filter>
+<intent-filter>
+    <action android:name="com.google.firebase.MESSAGING_EVENT" />
+</intent-filter>
 </service>
-``` 
+```
 
 `ExampleInstanceIdService` and `ExampleMessagingService` are your own services which have to inherit from `FirebaseInstanceIdService` and `FirebaseMessagingService`.
 
