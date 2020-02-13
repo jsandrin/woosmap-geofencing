@@ -12,7 +12,8 @@ This method is called when the extension starts. Here you can do the required pr
 ```
 The system gives you a limited time to process a notification. If this processing is not completed within the time limit, the expiration methods are called.
 
-## Check Location permissions 
+## Check Location permissions
+
 In the `didReceive` method, check if Location services is enable and the authorization status :
 ```swift
 if (!CLLocationManager.locationServicesEnabled() || CLLocationManager.authorizationStatus() == .denied

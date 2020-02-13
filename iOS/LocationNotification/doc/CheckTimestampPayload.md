@@ -8,6 +8,7 @@ let outOfTimeDelay = 300
 ```
 
 ## Compare with Server Timestamp
+
 In didReiceive method parse the payload to extract the timestamp server and compare with the timestamp local with a extratime. The timestamp is the time in second in UTC since 1970 : 
 ```swift
 if let timeStampServer = aps["timestamp"] as ? Int {

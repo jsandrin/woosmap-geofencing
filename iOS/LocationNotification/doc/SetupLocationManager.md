@@ -1,4 +1,5 @@
 ﻿## Check Payload
+
 Check if in the payload you have the parameter "category = location" in the json.
 ```swift
 if let category = aps["category"] as? NSString {
@@ -10,6 +11,7 @@ if let category = aps["category"] as? NSString {
 ```
 
 ## Setup the location manager
+
 ```swift
 // Setup The location manager
 func setupLocationManager(){
