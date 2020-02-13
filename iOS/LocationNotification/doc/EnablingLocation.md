@@ -1,7 +1,5 @@
-﻿
-##  Enabling Location
+﻿## Setting Up Core Location
 
-### Setting Up Core Location
 Here’s the code to get you started with Core Location in your iOS application:
 ```swift
 var locationManager = CLLocationManager()  
@@ -17,13 +15,13 @@ iOS 13 has the following three location permissions (ignore Denied since it igno
 
 ![alt text](https://raw.githubusercontent.com/woosmap/woosmap-geofencing/master/assets/ios/notifallow.png "Notification Allow")
 
-### Allow Once Permission
+## Allow Once Permission
 
 Allow Once is similar to Allow While Using, but only for one foreground session. That means that once you leave the application for a considerable time, the permission state changes to  `notDetermined`.
 
 The next time the user starts the application, the developer can ask for the permissions again, depending on their use case. This gives users some finer control over the location data and also allows the developers to handler one-off location cases easily.
 
-### Allow Always Hides in Allow While Using Permission
+## Allow Always Hides in Allow While Using Permission
 
 Allow While Using permission defers the Allow Always permission.
 
@@ -33,7 +31,11 @@ Let’s see how that works with the different kinds of location authorizations.
 
 ![alt text](https://raw.githubusercontent.com/woosmap/woosmap-geofencing/master/assets/ios/location-prompt-flow-ios-13.png "Prompt flow")
 
-### Case 1 : requestAlwaysAuthorization
+## Request Authorization
+
+You can request of two authorization cases.
+
+### `requestAlwaysAuthorization`
 
 -   Allow While Using permission handles Allows Allow permission only if you've requested location authorization using  `requestAlwaysAuthorisation`.
 -   With the above type of authorization, the user sees it as foreground permission, but  `CoreLocation`  informs the Delegate that it’s  `always`  permission. This way, it can monitor location events in the background, but the  `CLLocationManagerDelegate`  cannot receive those events.
@@ -41,7 +43,7 @@ Let’s see how that works with the different kinds of location authorizations.
 -   This way, Always Allow is deferred until a stage where it really requires the user’s consent for location updates in the background.
 -   The above case makes Always Allow a provisional authorization.
 
-### Case 2 :  `requestWhenInUseAuthorization`
+### `requestWhenInUseAuthorization`
 
 -   In this case, Always Allowed never happens since the developers themselves hadn’t set it on the  `CLLocationManager`  instance.
 -   Location is only accessed when the application is in the foreground (though it continues to access it for a very short interval once the user switches to the background).

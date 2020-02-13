@@ -1,12 +1,11 @@
-﻿
-##  Enabling the Push Notification Service
+﻿## Overview
 
 You need to create an App ID in your developer account and enable the push notification entitlement. Xcode has a simple way to do this, click the  **_Capabilities_**  tab and set the  _**Push Notifications**_  switch  **_On_**.
 
 After loading, it should look like this:
 ![alt text](https://raw.githubusercontent.com/woosmap/woosmap-geofencing/master/assets/ios/Push-Notification-Capability.png "Capability")
 
-### Asking for User Notifications Permission
+## Asking for User Notifications Permission
 
 There are two steps you take to register for push notifications. First, you must get the user’s permission to show notifications. Then, you can register the device to receive remote (push) notifications. If all goes well, the system will then provide you with a  **_device token_**, which you can think of as an “address” to this device.
 
@@ -38,7 +37,7 @@ Build and run. When the app launches, you should receive a prompt that asks for 
 
 Calling `registerForPushNotifications()` here ensures the app will attempt to register for push notifications any time it’s launched.
 
-###  Registering With APNs
+##  Registering With APNs
 
 Add the following two methods to the end of `AppDelegate`. iOS will call these to inform you about the result of `registerForRemoteNotifications()`:
 ```swift
@@ -62,7 +61,7 @@ That’s it! Build and run on a device. You should receive a token in the consol
 
 Copy this token, you’ll need it for testing.
 
-###  Sending a Push Notification
+##  Sending a Push Notification
 
 Launch  _PushNotifications_  and complete the following steps:
 
@@ -71,7 +70,8 @@ Launch  _PushNotifications_  and complete the following steps:
 3.  Enter your Key ID and Team ID in the relevant fields.
 4.  Under  _Body_, enter your app’s Bundle ID and your device token.
 5.  Change the request body to look like this:
- {
+```json
+{
   "aps": {
     "alert" : {
     "title" : "Push Remote Rich Notifications",
@@ -83,3 +83,7 @@ Launch  _PushNotifications_  and complete the following steps:
 	"category" : "location"
 	  }
 }
+```
+
+
+

@@ -1,5 +1,4 @@
-﻿
-##  Notifications Service Extensions
+﻿## Overview
 
 Notification extensions allow you to change the payload for notifications, and content extensions allow you to display a custom interface for notifications. They give a delay to process the notification payloads before the notification is displayed to the user. For example, upload an image, GIF, Video, decrypt the text to display it in the notification.
 
@@ -13,7 +12,7 @@ This method is called when the extension starts. Here you can do the required pr
 ```
 The system gives you a limited time to process a notification. If this processing is not completed within the time limit, the expiration methods are called.
 
-### Check Location permissions 
+## Check Location permissions 
 In the `didReceive` method, check if Location services is enable and the authorization status :
 ```swift
 if (!CLLocationManager.locationServicesEnabled() || CLLocationManager.authorizationStatus() == .denied
