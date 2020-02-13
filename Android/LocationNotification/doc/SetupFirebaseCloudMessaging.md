@@ -1,7 +1,4 @@
-﻿
-## Set up a Firebase Cloud Messaging 
-
-### Set up Firebase and the FCM SDK
+## Set up Firebase and the FCM SDK
 
 1.  If you haven't already,  [add Firebase to your Android project](https://firebase.google.com/docs/android/setup).
 2.  In your project-level  `build.gradle`  file, make sure to include Google's Maven repository in both your  `buildscript`  and  `allprojects`  sections.
@@ -10,7 +7,7 @@
 implementation 'com.google.firebase:firebase-messaging:19.0.1'
  ```
 
-### Create a class Messaging Service
+## Create a class Messaging Service
 
 Once the library is installed, we will implement a service that will listen to notification messages sent by Firebase. For that, we create a class WoosmapMessagingService.
 ```java
@@ -25,7 +22,7 @@ public class WoosmapMessagingService extends FirebaseMessagingService {
     }
 ```
 
-### Edit your app manifest
+## Edit your app manifest
 
 Add the following to your app's manifest:
 
@@ -45,7 +42,8 @@ Add the following to your app's manifest:
  
  `ExampleInstanceIdService` and `ExampleMessagingService` are your own services which have to inherit from `FirebaseInstanceIdService` and `FirebaseMessagingService`
 
-### Access the device registration token
+## Access the device registration token
+
 On initial startup of your app, the FCM SDK generates a registration token for the client app instance. If you want to target single devices or create device groups, you'll need to access this token by extending  [`FirebaseMessagingService`](https://firebase.google.com/docs/reference/android/com/google/firebase/messaging/FirebaseMessagingService)  and overriding  `onNewToken`.
 
 This section describes how to retrieve the token and how to monitor changes to the token. Because the token could be rotated after initial startup, you are strongly recommended to retrieve the latest updated registration token.
@@ -75,8 +73,9 @@ The registration token may change when:
 		 } 
 });
    ```
-### Monitor token generation
- The `onNewToken` callback fires whenever a new token is generated.
+## Monitor token generation
+
+The `onNewToken` callback fires whenever a new token is generated.
    ```java
  /**  
  * Called if InstanceID token is updated. This may occur if the security of  
@@ -93,6 +92,7 @@ public  void onNewToken(String token)  {
 }   
    ```
 
-#### Receive messages
+## Receive messages
+
 Firebase notifications behave differently depending on the foreground/background state of the receiving app. If you want foregrounded apps to receive notification messages or data messages, you’ll need to write code to handle the `onMessageReceived` callback. For an explanation of the difference between notification and data messages, see [Message types](https://firebase.google.com/docs/cloud-messaging/concept-options).
 

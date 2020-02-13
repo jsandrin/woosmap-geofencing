@@ -44,18 +44,6 @@ Get the location of user on notification to complete the payload with informatio
 * If you want send notification from an app iOS, use the project : https://github.com/noodlewerk/NWPusher#push-from-ios. Follow instructions to change the p12 file and enter the token of the notification app. 
 
 
-## Documentation
-
-* [Enabling Location](./doc/EnablingLocation.md)
-* [Enabling the Push Notification Service](./doc/EnablingPushNotificationService.md)
-* [Notifications Service Extensions](./doc/NotificationsServiceExtensions.md)
-* [Check Timestamp of the payload](./doc/CheckTimestampPayload.md)
-* [Setup the location manager](./doc/SetupLocationManager.md)
-* [APIs request](./doc/APIsRequest.md)
-
-
-
-
 
 
 

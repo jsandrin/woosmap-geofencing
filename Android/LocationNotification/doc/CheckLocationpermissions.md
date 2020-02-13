@@ -1,5 +1,3 @@
-﻿### Check Location permissions
-
 In the `WoosmapMessageBuilderMaps`, get the last location via the `FusedLocationProviderClient` before that check permission with using the `checkSelfPermission` method of [`ActivityCompat`](https://developer.android.com/reference/android/support/v4/app/ActivityCompat.html) or [`ContextCompat`](https://developer.android.com/reference/android/support/v4/content/ContextCompat.html).
 
 When permission has been granted, continue as usual.
