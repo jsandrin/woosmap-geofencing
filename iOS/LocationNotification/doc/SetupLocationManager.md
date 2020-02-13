@@ -1,4 +1,4 @@
-﻿## Check Payload
+## Check Payload
 
 Check if in the payload you have the parameter "category = location" in the json.
 ```swift

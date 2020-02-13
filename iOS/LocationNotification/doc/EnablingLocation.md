@@ -1,4 +1,4 @@
-﻿## Setting Up Core Location
+## Setting Up Core Location
 
 Here’s the code to get you started with Core Location in your iOS application:
 ```swift

@@ -1,4 +1,4 @@
-##  Overview
+## Overview
 
 Get the location of user on notification to complete the payload with information from APIs. In this sample, we call a search API Woosmap to get the POIs nearrest of the location of the user and a call to Google Static Map to show where is the nearrest POI.
 
@@ -6,7 +6,7 @@ Get the location of user on notification to complete the payload with informatio
   <img alt="Notification Location" src="https://raw.githubusercontent.com/woosmap/woosmap-geofencing/master/assets/ios/2Markers.png" width="50%">
 </p>
 
-##  Pre-requisites
+## Pre-requisites
 
 - iOS 8 and above.
 - Xcode 8 and above

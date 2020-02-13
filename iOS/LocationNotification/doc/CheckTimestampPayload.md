@@ -1,4 +1,4 @@
-﻿To verify if the notification is too late between the time send and the time received on the mobile.
+To verify if the notification is too late between the time send and the time received on the mobile.
 
 ## Delay timeout
 

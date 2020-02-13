@@ -1,4 +1,4 @@
-﻿## Find the Nearest POIs
+## Find the Nearest POIs
  
 In this case we call a Search API Woosmap to find the POI nearest of the user location. After we call the Google API static map to download a jpeg with the user location and the location of POI. 
 
