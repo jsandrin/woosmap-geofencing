@@ -47,4 +47,3 @@ You can request of two authorization cases.
 
 -   In this case, Always Allowed never happens since the developers themselves hadn’t set it on the  `CLLocationManager`  instance.
 -   Location is only accessed when the application is in the foreground (though it continues to access it for a very short interval once the user switches to the background).
-
