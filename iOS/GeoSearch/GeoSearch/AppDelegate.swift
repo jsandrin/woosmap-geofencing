@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Set private key Search API
-        GeoSearch.shared.setWoosmapAPIKey(key: "")
+        GeoSearch.shared.setWoosmapAPIKey(key: "YOUR_WOOSMAP_API_KEY")
         
         // Set your filter on position location and search
         GeoSearch.shared.setCurrentPositionFilter(distance: 10.0, time: 10)
