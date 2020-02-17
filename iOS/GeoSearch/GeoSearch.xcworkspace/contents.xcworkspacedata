@@ -19,7 +19,4 @@
    <FileRef
       location = "group:GeoSearch.xcodeproj">
    </FileRef>
-   <FileRef
-      location = "group:/Users/maclaurent/dev/geoSearch/paris.gpx">
-   </FileRef>
 </Workspace>

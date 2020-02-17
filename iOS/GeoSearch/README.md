@@ -4,7 +4,7 @@
 Get the location of user with most optimization battery and search the nearest POI. In this sample, we call a search API Woosmap to get the POIs nearrest of the location of the user with use less battery.
 
 <p align="center">
-  <img alt="GeoSearch" src="https://raw.githubusercontent.com/woosmap/woosmap-geofencing/master/assets/ios/GeoSearch1.png" width="50%">
+  <img alt="GeoSearch" src="../../assets/ios/GeoSearch1.png" width="50%">
 </p>
 
 ##  Pre-requisites
@@ -99,7 +99,7 @@ func serachAPIError(error: String) {
 
 * If you want find the nearest of your store from the user location, get Woosmap Key API on [Woosmap developer documentation](https://developers.woosmap.com/get-started).
 <p align="center">
-  <img alt="GeoSearch with POI from Search API" src="https://raw.githubusercontent.com/woosmap/woosmap-geofencing/master/assets/ios/GeoSearch2.png" width="50%">
+  <img alt="GeoSearch with POI from Search API" src="../../assets/ios/GeoSearch2.png" width="50%">
 </p>
 * If you don't use the APIs with keys, you can only get the location of the user.
 
