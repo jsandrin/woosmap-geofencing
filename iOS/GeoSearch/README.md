@@ -17,6 +17,14 @@ Get the location of user with most optimization battery and search the nearest P
 * Open your Xcode project, then drag and drop source directory onto your project. Make sure to select Copy items when asked if you extracted the code archive outside of your project.
 * Compile and install the mobile app onto your mobile device.
 
+## Get Keys
+
+* If you want find the nearest of your store from the user location, get Woosmap Key API on [Woosmap developer documentation](https://developers.woosmap.com/get-started).
+<p align="center">
+  <img alt="GeoSearch with POI from Search API" src="../../assets/ios/GeoSearch2.png" width="50%">
+</p>
+* If you don't use the APIs with keys, you can only get the location of the user.
+
 ## Usage 
 # Init Services Location
 The first step that should always be done each time your app is launched (in Foreground AND Background) is to set your Woosmap Private key Search API. This should be done as early as possible in your didFinishLaunchingWithOptions App Delegate. Depending on your integration, you should call startMonitoringInBackground too. This method must also be called everytime your app is Launched.
@@ -95,14 +103,10 @@ func serachAPIError(error: String) {
 }
 ```
 
-## Get Keys
-
-* If you want find the nearest of your store from the user location, get Woosmap Key API on [Woosmap developer documentation](https://developers.woosmap.com/get-started).
-<p align="center">
-  <img alt="GeoSearch with POI from Search API" src="../../assets/ios/GeoSearch2.png" width="50%">
-</p>
-* If you don't use the APIs with keys, you can only get the location of the user.
-
+## GPX files
+To testing geolocation in an iOS app, you can mock a route to simulate locations.  
+For create a gpx files, the following tool converts a Google Maps link (also works with Google Maps Directions) to a .gpx file : https://mapstogpx.com/mobiledev.php
+To emulate, foolow instruction here :  http://www.madebyuppercut.com/testing-geolocation-ios-app/
 
 ## Documentation
 

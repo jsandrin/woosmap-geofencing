@@ -18,7 +18,6 @@ class DataLocation:LocationServiceDelegate  {
         let location = locations.last!
   
         let locationToSave = LocationModel(locationId: locationId, latitude: location.coordinate.latitude, longitude: location.coordinate.longitude, dateCaptured: Date(), descriptionToSave: "description")
-        print("location to save = " + locationToSave.dateCaptured.stringFromDate())
         createLocation(location: locationToSave)
         self.lastLocation = location
     }

@@ -41,6 +41,25 @@ class DataPOI:SearchAPIDelegate  {
         return searchAPIData
     }
     
+    func getPOIbyLocationID(locationId: UUID)-> POI? {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
+        do {
+            let fetchRequest = NSFetchRequest<POI>(entityName: "POI")
+            fetchRequest.predicate = NSPredicate(format: "locationId == %@", locationId.uuidString)
+            let fetchedResults = try context.fetch(fetchRequest)
+            if let aPOI = fetchedResults.first {
+               return aPOI
+            }
+        }
+        catch {
+            print ("fetch task failed", error)
+        }
+        
+        return nil
+
+    }
+    
     func createPOI(POImodel: POIModel) {
         DispatchQueue.main.async(execute: {
             guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }

@@ -64,24 +64,22 @@ class LocationTableViewContoller: UITableViewController {
         placeToShow.removeAll()
         
         let locations = DataLocation().readLocations()
-        let pois = DataPOI().readPOI()
         
         for location in locations {
-            let customLoc = PlaceData()
-            customLoc.date = location.date
-            customLoc.latitude = location.latitude
-            customLoc.longitude = location.longitude
-            customLoc.locationDescription = location.locationDescription
-            customLoc.type = dataType.location
-            for poi in pois {
-                if(location.locationId == poi.locationId) {
-                    customLoc.zipCode = poi.zipCode
-                    customLoc.city = poi.city
-                    customLoc.distance = poi.distance
-                    customLoc.type = dataType.POI
-                }
+            let placeData = PlaceData()
+            placeData.date = location.date
+            placeData.latitude = location.latitude
+            placeData.longitude = location.longitude
+            placeData.locationDescription = location.locationDescription
+            placeData.type = dataType.location
+            let poi = DataPOI().getPOIbyLocationID(locationId: location.locationId!)
+            if (poi != nil) {
+                placeData.zipCode = poi!.zipCode
+                placeData.city = poi!.city
+                placeData.distance = poi!.distance
+                placeData.type = dataType.POI
             }
-            placeToShow.append(customLoc)
+            placeToShow.append(placeData)
         }
         
         //POI and Location sorted
@@ -122,24 +120,24 @@ class LocationTableViewContoller: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let locationData = placeToShow[indexPath.item]
+        let placeData = placeToShow[indexPath.item]
         // Configure the cell
-        let latitude = locationData.latitude
-        let longitude = locationData.longitude
+        let latitude = placeData.latitude
+        let longitude = placeData.longitude
         
-        if (placeToShow[indexPath.item].type == dataType.location) {
+        if (placeData.type == dataType.location) {
             let cell = tableView.dequeueReusableCell(withIdentifier: "LocationCell", for: indexPath)
             cell.textLabel?.numberOfLines = 3
                         
             cell.textLabel?.text = String(format:"%f",latitude) + "," + String(format:"%f",longitude) 
-            cell.detailTextLabel?.text = locationData.date!.stringFromDate()
+            cell.detailTextLabel?.text = placeData.date!.stringFromDate()
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "POICell", for: indexPath) as! POITableCellView
             cell.location.text = String(format:"%f",latitude) + "," + String(format:"%f",longitude)
-            cell.time.text = locationData.date!.stringFromDate()
+            cell.time.text = placeData.date!.stringFromDate()
             cell.info.numberOfLines = 3
-            cell.info.text = "City = " + locationData.city! + "\nZipcode = " + locationData.zipCode!  + "\nDistance = " + String(format:"%f",locationData.distance)
+            cell.info.text = "City = " + placeData.city! + "\nZipcode = " + placeData.zipCode!  + "\nDistance = " + String(format:"%f",placeData.distance)
             return cell
         }
         
