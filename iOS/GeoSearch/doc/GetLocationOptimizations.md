@@ -14,5 +14,5 @@ The service of significant displacements of the phone using too much the battery
 
 As a user moves, we create geofencing zones around them. When the user leaves or enters one of these zones, the application will wake up (background-active), request a position, send it, then calculate new geofencing zones according to the position obtained.
 <p align="center">
-  <img alt="GeoSearch with Regions detections" src="../../assets/ios/GeoSearch3.png" width="50%">
+  <img alt="GeoSearch with Regions detections" src="../../../assets/ios/GeoSearch3.png" width="50%">
 </p>
