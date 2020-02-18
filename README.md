@@ -18,4 +18,4 @@ details.
 
 ## Links
 
-The official site for the library is at <https://community.woosmap.com/woosmap-geofencing/>.
+The official site for the library is at <https://community.woosmap.com/geolocation-push-notification/>.
