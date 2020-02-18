@@ -21,6 +21,10 @@ class MapViewController: UIViewController,MKMapViewDelegate,RegionsServiceDelega
         mapView.delegate = self as MKMapViewDelegate
         GeoSearch.shared.getLocationService().regionDelegate = self
         
+        for poi:POI in DataPOI().readPOI() {
+            mapView.addAnnotation(annotationForLocation(poi.convertToModel()))
+        }
+        
         
         NotificationCenter.default.addObserver(
             self,
